@@ -34,3 +34,15 @@ stack_t *get_top(stack_t **s)
 		ptr = ptr->next;
 	return (ptr);
 }
+
+void free_stack(void)
+{
+	stack_t *ptr = data.stack, *temp;
+
+	while (ptr)
+	{
+		temp = ptr;
+		free(temp);
+		ptr = ptr->next;
+	}
+}

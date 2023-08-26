@@ -27,5 +27,5 @@ void exec_cmd(void)
 		}
 	}
 
-	/*print_error();*/
+	print_err();
 }

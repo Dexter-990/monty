@@ -61,5 +61,7 @@ void op_push(stack_t **stack, unsigned int line_number);
 int is_digit(char *n);
 void print_op_error(char *str, int l_num);
 stack_t *get_top(stack_t **s);
+void print_err(void);
+void free_stack(void);
 
 #endif

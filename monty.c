@@ -33,6 +33,7 @@ int main(int argc, char **argv)
 		exec_cmd();
 	}
 	fclose(data.filePtr);
+	free_stack();
 
 	return (0);
 }
