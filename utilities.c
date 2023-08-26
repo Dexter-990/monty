@@ -34,6 +34,9 @@ stack_t *get_top(stack_t **s)
 		ptr = ptr->next;
 	return (ptr);
 }
+/**
+ * free_stack - frees stack
+ */
 
 void free_stack(void)
 {
