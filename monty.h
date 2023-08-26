@@ -63,5 +63,6 @@ void print_op_error(char *str, int l_num);
 stack_t *get_top(stack_t **s);
 void print_err(void);
 void free_stack(void);
+void op_pint(stack_t **stack, unsigned int line_number);
 
 #endif

@@ -8,6 +8,7 @@ void exec_cmd(void)
 	instruction_t execs[] = {
 		{"push", op_push},
 		{"pall", op_pall},
+		{"pint", op_pint},
 		{NULL, NULL}
 	};
 	int i;

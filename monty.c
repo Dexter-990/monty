@@ -1,5 +1,6 @@
 #include "monty.h"
 
+i_data data = {0, NULL, NULL, NULL, NULL, NULL, NULL};
 /**
  * main - starts the program
  * @argc: argument count
@@ -7,7 +8,6 @@
  * Return: 0 always
  */
 
-i_data data = {0, NULL, NULL, NULL, NULL, NULL, NULL};
 int main(int argc, char **argv)
 {
 	char buf[100];

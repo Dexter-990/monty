@@ -55,3 +55,22 @@ void op_pall(stack_t **stack, unsigned int line_number)
 		top = top->prev;
 	}
 }
+
+/**
+ * op_pint - prints all elements in a stack
+ * @stack: head pointer
+ * @line_number: line_number
+ */
+
+void op_pint(stack_t **stack, unsigned int line_number)
+{
+	stack_t *top = get_top(stack);
+
+	(void) line_number;
+	if (!top)
+	{
+		print_op_error("can't pint, stack empty", data.c_line);
+	}
+
+	fprintf(stdout, "%d\n", top->n);
+}
