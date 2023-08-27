@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /*
- * is_digit - checks if an input is an int
+ * is_digit - checks if an input is an int or not
  * @n: input
  * Return: 1 for true 0 for false
  */

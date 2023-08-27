@@ -94,3 +94,30 @@ void op_pop(stack_t **stack, unsigned int line_number)
 		top->prev->next = NULL;
 	free(top);
 }
+
+/**
+ * op_swap - prints all elements in a stack
+ * @stack: head pointer
+ * @line_number: line_number
+ */
+
+void op_swap(stack_t **stack, unsigned int line_number)
+{
+	stack_t *top;
+	int i = 0, temp;
+
+	(void) line_number;
+	top = get_top(stack);
+	while (top->prev)
+	{
+		i++;
+		top = top->prev;
+	}
+	if (i < 2)
+		print_op_error("can't swap, stack too short", data.c_line);
+	top = get_top(stack);
+
+	temp = top->prev->n;
+	top->prev->n = top->n;
+	top->n = temp;
+}
