@@ -113,9 +113,10 @@ void op_swap(stack_t **stack, unsigned int line_number)
 		i++;
 		top = top->prev;
 	}
-	if (i < 2)
-		print_op_error("can't swap, stack too short", data.c_line);
+
 	top = get_top(stack);
+	if (!top || !top->prev)
+		print_op_error("can't swap, stack too short", data.c_line);
 
 	temp = top;
 	temp1 = top->prev;
