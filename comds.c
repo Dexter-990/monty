@@ -12,6 +12,7 @@ void exec_cmd(void)
 		{"pop", op_pop},
 		{"swap", op_swap},
 		{"add", op_add},
+		{"nop", op_nop},
 		{NULL, NULL}
 	};
 	int i;

@@ -27,6 +27,6 @@ void op_add(stack_t **stack, unsigned int line_number)
  * @stack: head of stack
  * @line_number: line number
  */
-void op_add(stack_t **stack, unsigned int line_number)
+void op_nop(stack_t **stack, unsigned int line_number)
 {
 }
