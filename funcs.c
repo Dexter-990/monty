@@ -74,3 +74,23 @@ void op_pint(stack_t **stack, unsigned int line_number)
 
 	fprintf(stdout, "%d\n", top->n);
 }
+
+/**
+ * op_pop - prints all elements in a stack
+ * @stack: head pointer
+ * @line_number: line_number
+ */
+
+void op_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *top = get_top(stack);
+
+	(void) line_number;
+	if (!top)
+		print_op_error("can't pop an empty stack", data.c_line);
+	if (!top->prev)
+		*stack = NULL;
+	else
+		top->prev->next = NULL;
+	free(top);
+}
