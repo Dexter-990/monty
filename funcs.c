@@ -103,8 +103,8 @@ void op_pop(stack_t **stack, unsigned int line_number)
 
 void op_swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *top;
-	int i = 0, temp;
+	stack_t *top, *temp, *temp1;
+	int i = 0;
 
 	(void) line_number;
 	top = get_top(stack);
@@ -117,7 +117,11 @@ void op_swap(stack_t **stack, unsigned int line_number)
 		print_op_error("can't swap, stack too short", data.c_line);
 	top = get_top(stack);
 
-	temp = top->prev->n;
-	top->prev->n = top->n;
-	top->n = temp;
+	temp = top;
+	temp1 = top->prev;
+	temp->prev = temp1->prev;
+	temp->next = temp1;
+	temp1->prev = temp;
+	temp1->next = NULL;
+
 }
