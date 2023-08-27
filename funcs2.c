@@ -21,3 +21,12 @@ void op_add(stack_t **stack, unsigned int line_number)
 	top = get_top(stack);
 	top->n = sum;
 }
+
+/**
+ * op_add - adds top two elements
+ * @stack: head of stack
+ * @line_number: line number
+ */
+void op_add(stack_t **stack, unsigned int line_number)
+{
+}
